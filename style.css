@@ -7,3 +7,8 @@
 .Titles_Lang{text-align: center;}
 .Titles_Lang{ font-weight: bold;}
 .Titles_Lang{font-size: x-large;}
+#Pictures{
+  position: absolute;
+  left: 66%;             
+  top: 130%; 
+ text-align: center; }
