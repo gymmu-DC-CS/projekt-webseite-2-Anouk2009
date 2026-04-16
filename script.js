@@ -1,42 +1,27 @@
 
 
-      // Deine Zitat-Daten
-    const zitateListe = [
-        { text: "Warte nicht darauf, zu investieren. Investiere und warte.", author: "Unbekannt" },
-        { text: "Gib nicht aus, was nach dem Sparen übrig bleibt, sondern spare, was nach dem Ausgeben übrig bleibt.", author: "Warren Buffett" },
-        { text: "Reich wird man nicht durch das, was man verdient, sondern durch das, was man nicht ausgibt.", author: "Henry Ford" },
-        { text: "Eine Investition in Wissen bringt noch immer die besten Zinsen.", author: "Benjamin Franklin" },
-        { text: "Geld ist ein guter Diener, aber ein schlechter Herr.", author: "Francis Bacon" }
-    ];
-
+    // Wir merken uns, welches Zitat gerade dran ist
     let aktuellerIndex = 0;
 
-    // Elemente aus dem HTML holen
-    const textFeld = document.getElementById('quote-text');
-    const autorFeld = document.getElementById('quote-author');
-    const btnVor = document.getElementById('next-btn');
-    const btnZurueck = document.getElementById('prev-btn');
+    function wechsle(richtung) {
+        // 1. Alle Zitate finden
+        const alleZitate = document.getElementsByClassName("mein-zitat");
 
-    // Funktion zum Anzeigen des Zitats
-    function updateZitat() {
-        textFeld.textContent = `"${zitateListe[aktuellerIndex].text}"`;
-        autorFeld.textContent = `- ${zitateListe[aktuellerIndex].author}`;
-    }
+        // 2. Das aktuelle Zitat verstecken
+        alleZitate[aktuellerIndex].style.display = "none";
 
-    // Event-Listener für "Weiter"
-    btnVor.addEventListener('click', () => {
-        aktuellerIndex++;
-        if (aktuellerIndex >= zitateListe.length) {
-            aktuellerIndex = 0; // Zurück zum Start
+        // 3. Den Index neu berechnen (+1 oder -1)
+        aktuellerIndex = aktuellerIndex + richtung;
+
+        // Wenn wir über das Ende hinausgehen -> zurück zum Anfang
+        if (aktuellerIndex >= alleZitate.length) {
+            aktuellerIndex = 0;
         }
-        updateZitat();
-    });
-
-    // Event-Listener für "Zurück"
-    btnZurueck.addEventListener('click', () => {
-        aktuellerIndex--;
+        // Wenn wir vor den Anfang gehen -> zum letzten Zitat
         if (aktuellerIndex < 0) {
-            aktuellerIndex = zitateListe.length - 1; // Zum letzten Zitat
+            aktuellerIndex = alleZitate.length - 1;
         }
-        updateZitat();
-    });
+
+        // 4. Das neue Zitat anzeigen
+        alleZitate[aktuellerIndex].style.display = "block";
+    }

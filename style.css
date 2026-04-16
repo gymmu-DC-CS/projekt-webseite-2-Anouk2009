@@ -1,49 +1,24 @@
 
-.quote-container {
-    max-width: 600px;
-    margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #C5A059;
-    padding: 20px;
-}
-
-/* Text-Styling */
-#quote-text {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #F5F2E8;
-    min-height: 60px; /* Verhindert, dass die Box springt */
-    margin: 0 0 10px 0;
-}
-
-#quote-author {
-    display: block;
-    font-weight: bold;
-    color: #C5A059;
-    margin-bottom: 20px;
-}
-
-/* Die Steuerung (Buttons nebeneinander) */
-.quote-controls {
-    display: flex;
-    gap: 10px;
-}
-
-.nav-btn {
-    background-color: #C5A059;
-    color: #18401c;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.nav-btn:hover {
-    background-color: #e2b96c;
-}
-  
+.zitat-box {
+        max-width: 500px;
+        border: 2px solid #C5A059;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        color: white;
+        text-align: left;
+    }
+    .text { font-size: 1.2rem; font-style: italic; min-height: 50px; }
+    .autor { color: #C5A059; font-weight: bold; margin-bottom: 20px; }
+    
+    .navigation button {
+        background: #C5A059;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+    }
 
 /* Fix für die Positionierung, damit DE und EN exakt übereinander liegen */
 .buch-container{
@@ -69,7 +44,7 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     color: #C5A059;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Zusammengefasste Buch-Container (damit sie an der gleichen Stelle sind) */
@@ -101,9 +76,11 @@ body {
     font-size: x-large;
 }
 
-#summary, .Texte, {
-    text-align: center;
-}
+.Inhaltsangabe_1{
+    text-align: center;}
+
+#summary, .Texte {
+    text-align: center;}
 
 /* Links */
 a {

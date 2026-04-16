@@ -5,6 +5,7 @@
     <meta name= "viewport" content="width=device-width, initial-scale=1.0">
     <title>Finanzielles Level Up</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,24 +18,45 @@
     zur absoluten Kontrolle über dein Geld.</p>
 <br> <br> <br>
 
-<h3><p class="Inhaltsangabe_1 de">Inhaltsangabe</p></h3>
+<h3><p class="Inhaltsangabe_1">Inhaltsangabe</p></h3>
 
-<p class="Inhaltsangabe_1 de"> <a href="#Investing"> Investing </a></p>
-<p class="Inhaltsangabe_1 de"> <a href="#Budgeting"> Bundgeting </a></p>
-<p class="Inhaltsangabe_1 de"> <a href="#Managmet" > Management </a></p>
-<p class="Inhaltsangabe_1 de"> <a href="#Nebenjobs" > Nebenjobs </a></p>
+<p class="Inhaltsangabe_1 "> <a href="#Investing"> Investing </a></p>
+<p class="Inhaltsangabe_1 "> <a href="#Budgeting"> Bundgeting </a></p>
+<p class="Inhaltsangabe_1 "> <a href="#Managmet" > Management </a></p>
+<p class="Inhaltsangabe_1 "> <a href="#Nebenjobs" > Nebenjobs </a></p>
 
-<br><br><br><div class="quote-container">
-    <div class="quote-box">
-        <p id="quote-text">"Warte nicht darauf, zu investieren. Investiere und warte."</p>
-        <span id="quote-author">- Unbekannt</span>
+<br><br><br>
+
+
+<div class="zitat-box">
+    <div class="mein-zitat">
+        <p class="text">"Warte nicht darauf, zu investieren. Investiere und warte."</p>
+        <p class="autor">- Unbekannt</p>
     </div>
-    
-    <div class="quote-controls">
-        <button id="prev-btn" class="nav-btn">&#10094; Zurück</button>
-        <button id="next-btn" class="nav-btn">Weiter &#10095;</button>
+
+    <div class="mein-zitat" style="display:none">
+        <p class="text">"Reich wird man durch das, was man nicht ausgibt."</p>
+        <p class="autor">- Henry Ford</p>
     </div>
-</div><br><br>
+
+    <div class="mein-zitat" style="display:none">
+        <p class="text">"Eine Investition in Wissen bringt immer die besten Zinsen."</p>
+        <p class="autor">- Benjamin Franklin</p>
+    </div>
+
+    <div class="mein-zitat" style="display:none">
+        <p class="text">"Geld ist ein guter Diener, aber ein schlechter Herr."</p>
+        <p class="autor">- Francis Bacon</p>
+    </div>
+
+    <div class="navigation">
+        <button type="button" onclick="wechsle(-1)">&#10094; Zurück</button>
+        <button type="button" onclick="wechsle(1)">Weiter &#10095;</button>
+    </div>
+</div>
+
+
+<br><br>
 
 <div class="buch-container de">
     <h2 class="spalten-titel de">Meine Buchempfehlungen</h2> <br><br>
