@@ -1,49 +1,113 @@
 
+.quote-container {
+    max-width: 600px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #C5A059;
+    padding: 20px;
+}
 
-.Titles{font-weight: bold;}
-.Titles{font-size: x-large;}
+/* Text-Styling */
+#quote-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #F5F2E8;
+    min-height: 60px; /* Verhindert, dass die Box springt */
+    margin: 0 0 10px 0;
+}
 
-#summary{text-align: center; font-size: large;}
+#quote-author {
+    display: block;
+    font-weight: bold;
+    color: #C5A059;
+    margin-bottom: 20px;
+}
 
-.Inhaltsangabe{font-size: x-large;}
-.Inhaltsangabe_1{font-size: x-large; text-align: center;}
+/* Die Steuerung (Buttons nebeneinander) */
+.quote-controls {
+    display: flex;
+    gap: 10px;
+}
 
-#Name_Website{text-align: center;
-  font-size: 3.5rem ;
-  font-weight: 800;            
-  color: #C5A059;                    
-  margin-bottom: 20px;}
+.nav-btn {
+    background-color: #C5A059;
+    color: #18401c;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
 
-.Texte{text-align: center;}
+.nav-btn:hover {
+    background-color: #e2b96c;
+}
+  
 
-.Titles_Lang{text-align: center;}
-.Titles_Lang{ font-weight: bold;}
-.Titles_Lang{font-size: x-large;}
+/* Fix für die Positionierung, damit DE und EN exakt übereinander liegen */
+.buch-container{
+    position: absolute;
+    left: 70%;
+    top: 750px;
+    transform: translateX(-50%);
+    text-align: center;
+}
 
-.buch-container {position: absolute;
-  left: 70%;
-  top: 750px;
-  transform: translateX(-50%);
-  text-align: center;}
+/* Gemeinsames Design für beide Sprachen */
+body {
+    background-color: #18401c;
+    color: #F5F2E8;
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+}
 
-.book-img {display: block;            
-  width: 200px;              
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;}
+/* Positionierung der Website-Namen */
+#Name_Website {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #C5A059;
+    margin-bottom: 20px;
+}
 
-.book-text { margin-top: 10px;          
-  font-weight: bold;}
+/* Zusammengefasste Buch-Container (damit sie an der gleichen Stelle sind) */
+.buch-container {
+    position: absolute;
+    left: 70%;
+    top: 750px;
+    transform: translateX(-50%);
+    text-align: center;
+}
 
-body {background-color: #18401c;
-  color: #F5F2E8;            
-  margin: 0;
-  padding: 20px;
-  font-family: sans-serif;}
+/* Bilder-Design */
+.book-img{
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-a {color: #C5A059;      
-  text-decoration: none;
-  border-bottom: 1px solid #C5A059;
-  transition: all 0.3s ease;}
-a:hover {color: #0F0F0F ;    
-border-bottom-color: #0F0F0F;} 
+.book-text {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Texte und Titel */
+.Titles, .Titles_Lang {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#summary, .Texte, {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #C5A059;
+    text-decoration: none;
+    border-bottom: 1px solid #C5A059;
+}
